@@ -1,20 +1,13 @@
 import express from "express";
-
-import produtosController from "./controllers/produtosController.js";
-
+import controllerProdutos from "./controllers/produtosController.js";
+import db from "./database/sqlite-db.js";
 import generalMiddleware from "./middleware/general-middleware.js";
-import produtosMiddleware from "./middleware/produtos-middleware";
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
 generalMiddleware(app);
-produtosMiddleware(app);
+controllerProdutos(app, db);
 
-produtosController(app);
-
-app.listen(port, () => {
-  console.log(`Servidor aberto na http://localhost:${port}/`);
-});
+app.listen(3000);

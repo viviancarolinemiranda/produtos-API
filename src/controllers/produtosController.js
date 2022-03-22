@@ -1,16 +1,33 @@
-const produtosController = (app) => {
-  app.get("/produtos", (req, res) => {
-    res.json({
-      Produtos: [],
-    });
+import Produto from "../models/Produto.js";
+
+const controllerProdutos = (app, db) => {
+  const produtoModel = new Produto(db);
+
+  app.get("/produtos", async (req, res) => {
+    res.json(await produtoModel.mostrarProduto());
   });
 
-  app.post("/produtos", (req, res) => {
+  app.get("/id/:id", async (req, res) => {
+    const id = req.params.id;
+    res.json(await produtoModel.mostrarProdPorID(id));
+  });
+
+  app.post("/addProd", async (req, res) => {
     const body = req.body;
-    res.json({
-      msg: `Poduto ${body.titulo} inserido com sucesso.`,
-    });
+    res.json(await produtoModel.insereProduto(body));
+  });
+
+  app.put("/produtos/id/:id", async (req, res) => {
+    const id = req.params.id;
+    const body = req.body;
+
+    res.json(await produtoModel.atualizaProduto(id, body));
+  });
+
+  app.delete("/id/:id", async (req, res) => {
+    const id = req.params.id;
+    res.json(await produtoModel.deletaProduto(id));
   });
 };
 
-export default produtosController;
+export default controllerProdutos;
