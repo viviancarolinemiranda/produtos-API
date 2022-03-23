@@ -1,23 +1,25 @@
 {
-  "dependencies": {
-    "express": "^4.17.3"
-  },
   "name": "projeto_modulo_4",
   "version": "1.0.0",
   "description": "Projeto de final de módulo 4",
   "main": "index.js",
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  },
   "scripts": {
     "start": "nodemon ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index.js"
   },
   "keywords": [
     "api",
     "node"
   ],
   "type": "module",
-  "author": "Vivian Caroline Miranda",
-  "license": "ISC"
+  "author": "viviancarolinemiranda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
