@@ -149,6 +149,8 @@ npm start
 
 
 ## Autora
+<a href="https://www.linkedin.com/in/viviancaroline/">
+  <img height="180em" width="48%" src="https://media-exp1.licdn.com/dms/image/C4D03AQHgxVyxR8ZKHA/profile-displayphoto-shrink_800_800/0/1643771677702?e=1653523200&v=beta&t=9jJJL1BZkPSS-I9RVnD0J0BUSHptj0NEj2ObFLE1itU"/>
 Vivian Caroline Miranda
 <br><a href = "mailto:vivianmiranda@alunos.utfpr.edu.br"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
   <a href="https://www.linkedin.com/in/viviancaroline/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
