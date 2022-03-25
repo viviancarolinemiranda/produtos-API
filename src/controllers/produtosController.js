@@ -4,12 +4,17 @@ const controllerProdutos = (app, db) => {
   const produtoModel = new Produto(db);
 
   app.get("/produtos", async (req, res) => {
-    res.json(await produtoModel.mostrarProduto());
+    res.json(await produtoModel.mostrarProdutos());
   });
 
   app.get("/produtos/id/:id", async (req, res) => {
     const id = req.params.id;
     res.json(await produtoModel.mostrarProdPorID(id));
+  });
+
+  app.get("/produtos/tipo/:tipo", async (req, res) => {
+    const tipo = req.params.tipo;
+    res.json(await produtoModel.mostrarProdPorTipo(tipo));
   });
 
   app.post("/produtos", async (req, res) => {

@@ -6,7 +6,7 @@ class Produto {
     this.dao = new ProdutosDAO(db);
   }
 
-  mostrarProduto = async () => {
+  mostrarProdutos = async () => {
     try {
       return await this.dao.mostrarProduto();
     } catch (erro) {
@@ -19,6 +19,16 @@ class Produto {
   mostrarProdPorID = async (id) => {
     try {
       return await this.dao.mostrarProdPorID(id);
+    } catch (erro) {
+      return {
+        msg: erro.message,
+      };
+    }
+  };
+
+  mostrarProdPorTipo = async (tipo) => {
+    try {
+      return await this.dao.mostrarProdPorTipo(tipo);
     } catch (erro) {
       return {
         msg: erro.message,

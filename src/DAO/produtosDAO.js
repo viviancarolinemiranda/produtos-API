@@ -3,7 +3,7 @@ class ProdutosDAO {
     this.db = db;
   }
 
-  mostrarProduto = () => {
+  mostrarProdutos = () => {
     return new Promise((resolve, reject) => {
       this.db.all("SELECT * FROM PRODUTOS", (erro, rows) => {
         erro ? reject(erro) : resolve({ produto: rows });
@@ -16,6 +16,18 @@ class ProdutosDAO {
       this.db.get(
         "SELECT * FROM PRODUTOS WHERE PRODUTO_ID = ?",
         id,
+        (erro, rows) => {
+          erro ? reject(erro) : resolve({ produto: rows });
+        }
+      );
+    });
+  };
+
+  mostrarProdPorTipo = (tipo) => {
+    return new Promise((resolve, reject) => {
+      this.db.all(
+        "SELECT * FROM PRODUTOS WHERE TIPO = ?",
+        tipo,
         (erro, rows) => {
           erro ? reject(erro) : resolve({ produto: rows });
         }
