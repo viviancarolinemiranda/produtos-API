@@ -8,7 +8,7 @@ class Produto {
 
   mostrarProdutos = async () => {
     try {
-      return await this.dao.mostrarProduto();
+      return await this.dao.mostrarProdutos();
     } catch (erro) {
       return {
         msg: erro.message,
