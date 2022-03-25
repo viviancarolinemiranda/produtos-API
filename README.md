@@ -86,7 +86,7 @@ npm start
     
  * **GET /produtos/tipo/{Tipo}**
      
-     --Em {Tipo} utilize a primeira letra maiúscula.
+     --Em {Tipo}, utilize a primeira letra maiúscula.
 
      Schema da resposta
      ```
