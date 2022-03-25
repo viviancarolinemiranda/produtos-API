@@ -67,7 +67,8 @@ npm start
     }
    
  * **GET /produtos/id/{id}**
-    *--Considere um {id} entre 11 e 20.
+    
+    --Considere um {id} entre 11 e 20.
     
     Schema da resposta
     ```
@@ -84,7 +85,8 @@ npm start
     ```
     
  * **GET /produtos/tipo/{Tipo}**
-     *--Em {Tipo} utilize a primeira letra maiúscula.
+     
+     --Em {Tipo} utilize a primeira letra maiúscula.
 
      Schema da resposta
      ```
