@@ -1,7 +1,7 @@
 import ProdutosDAO from "../DAO/produtosDAO.js";
 import ProdutoSchema from "./ProdutoSchema.js";
 
-class Produto {
+export default class Produto {
   constructor(db) {
     this.dao = new ProdutosDAO(db);
   }
@@ -73,5 +73,3 @@ class Produto {
     }
   };
 }
-
-export default Produto;

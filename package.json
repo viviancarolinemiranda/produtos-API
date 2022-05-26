@@ -4,9 +4,9 @@
   "description": "Projeto de final de módulo 4",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/index.js"
+    "start": "nodemon ./src/app.js",
+    "test": "jest",
+    "dev": "nodemon ./src/app.js"
   },
   "keywords": [
     "api",
@@ -20,6 +20,11 @@
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.3"
+  },
+  "jest": {
+    "verbose": true
   }
 }
